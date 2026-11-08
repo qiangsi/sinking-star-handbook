@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第三章 · 读谱 — 沉星手册</title>
+<meta name="description" content="《沉星之序》解法记号详解：箭头与次数、X/C/V 动作代码、自动求解记录中的 F/B 说明。沉星手册第三章。">
+<link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="index.html"><span class="star">✦</span>沉星手册<small>SINKING STAR HANDBOOK</small></a>
+    <button class="nav-toggle" aria-label="打开目录">☰</button>
+    <nav class="nav">
+      <a href="map.html">识图</a>
+      <a href="find.html">寻题</a>
+      <a href="notation.html" aria-current="page">读谱</a>
+      <a href="levels.html">关卡索引</a>
+      <a href="about.html">附录</a>
+      <a class="nav-cta" href="levels.html">查一关 →</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="page-head">
+    <div class="chapter-mark">第 三 章</div>
+    <h1>读谱 · 箭头、次数与动作代码</h1>
+    <p class="lede">
+      社区解法是一串紧凑的字母与数字。这章把每个记号拆开讲，
+      再说清自动求解记录里两个特殊符号的来历——读懂了再动手，比抄快得多。
+    </p>
+  </div>
+
+  <div class="prose">
+
+    <section>
+      <h2>记号总表</h2>
+      <div class="glyph-table">
+        <div class="glyph"><div class="g">↑</div><div class="d"><b>U · 向上</b><span>字母 U 即「上」方向的移动</span></div></div>
+        <div class="glyph"><div class="g">↓</div><div class="d"><b>D · 向下</b><span>字母 D 即「下」方向的移动</span></div></div>
+        <div class="glyph"><div class="g">←</div><div class="d"><b>L · 向左</b><span>字母 L 即「左」方向的移动</span></div></div>
+        <div class="glyph"><div class="g">→</div><div class="d"><b>R · 向右</b><span>字母 R 即「右」方向的移动</span></div></div>
+        <div class="glyph"><div class="g">×n</div><div class="d"><b>数字 · 重复次数</b><span>紧跟字母后的数字表示连续执行几次，如 R2 = → ×2</span></div></div>
+        <div class="glyph"><div class="g">X</div><div class="d"><b>X · 主要行动</b><span>推动、互动等核心动作，以游戏内实际按键为准</span></div></div>
+        <div class="glyph"><div class="g">C</div><div class="d"><b>C · 切换角色</b><span>把操作权换给另一位可操作角色</span></div></div>
+        <div class="glyph"><div class="g">V</div><div class="d"><b>V · 次要行动</b><span>次要动作键，同样以游戏内绑定为准</span></div></div>
+        <div class="glyph"><div class="g">F / B</div><div class="d"><b>疑似「前 / 后」</b><span>仅见于自动求解记录，含义未证实，见下文</span></div></div>
+      </div>
+      <p style="color:var(--muted);font-size:14px;margin-top:16px">
+        键位提示：社区播放器按 WASD / 方向键回放方向移动，X、C、V 对应同名键位；
+        播放器里 Z 是撤销、R 是重置。你在游戏里完全可以自定义按键——
+        谱上的字母只表示「方向」与「动作类型」，不锁定你的键位。
+      </p>
+    </section>
+
+    <section>
+      <h2>读一条真实的谱</h2>
+      <p>
+        以镜像群岛的第一关为例，社区数据里的原始记录是
+        <code style="font-family:var(--mono);color:var(--gold-bright)">R2XL4XL6U</code>。
+        按记号展开，一共六步：
+      </p>
+      <div class="moves" style="display:flex;flex-wrap:wrap;gap:7px;margin:16px 0">
+        <span class="tok"><span class="dir">→</span><span class="x">×2</span></span>
+        <span class="tok"><span class="act">X</span></span>
+        <span class="tok"><span class="dir">←</span><span class="x">×4</span></span>
+        <span class="tok"><span class="act">X</span></span>
+        <span class="tok"><span class="dir">←</span><span class="x">×6</span></span>
+        <span class="tok"><span class="dir">↑</span></span>
+      </div>
+      <p>
+        用人话说：向右走两格，执行一次主要行动；向左回四格，再来一次主要行动；
+        继续向左六格，最后向上一步收尾。方向是棋盘视角的方向——
+        建议先把镜头摆正、和截图对齐，再按谱走，镜头一歪，左右就全反了。
+      </p>
+    </section>
+
+    <section>
+      <h2>关于 F / B：一个诚实的存疑</h2>
+      <p>
+        翻开本手册索引里的自动求解记录，你会在少数序列中看到 <b>F</b> 与 <b>B</b> 两个字母。
+        本手册核对过社区播放器的源码：它的键位表里只有 U、D、L、R、X、C、V，
+        遇到 F、B 会直接跳过并给出警告。社区玩家录制的路线里，也从未出现过这两个字母。
+      </p>
+      <p>
+        也就是说：F / B 只存在于程序求解的输出里，很可能是求解器对某种特殊局面
+        （比如三维关卡的前后轴，或引擎内部的特殊步）的编码，但目前没有权威解释。
+        本手册不做臆断，只给三条实用建议：
+      </p>
+      <ol>
+        <li>含 F / B 的序列，优先到社区地图上找同关的玩家路线或视频替代；</li>
+        <li>若只能用自动序列，把它当作「思路参考」而不是「操作清单」——跳过 F / B 逐步试；</li>
+        <li>试出来了？欢迎把结论带回社区（joric/ootss 的仓库 Issue 区），让下一个玩家少走弯路。</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>三条使用心法</h2>
+      <h3>① 分段验证，不要一口气抄完</h3>
+      <p>
+        把长序列按 5–8 步切一段，走一段、看局面：角色到位了吗？机关响应了吗？
+        一旦对不上，立刻停在原地找原因，别用撤销把进度全冲掉。
+      </p>
+      <h3>② 先理解，再复刻</h3>
+      <p>
+        每段问自己一句「这几步在干什么」——是把石头顶到转角，还是把光束借镜子折过去？
+        理解了意图，中途出偏差时你才知道怎么补救；纯抄谱，一步错就全盘乱。
+      </p>
+      <h3>③ 谱是路标，不是代打</h3>
+      <p>
+        自动求解的步数未必最优，社区路线也可能有更优雅的替代。
+        走通之后不妨回头看看：有没有更短的路径？那才是这游戏真正的乐趣所在。
+      </p>
+    </section>
+
+    <section>
+      <h2>读谱之后</h2>
+      <p>规则都在手上了，去索引里找到你那一关，把它走通吧。</p>
+      <p><a class="btn btn-gold" href="levels.html">进入第四章 · 关卡索引 →</a></p>
+    </section>
+
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h4>✦ 沉星手册</h4>
+        <p style="margin:0">一本写给卡关玩家的夜航手册。<br>免费使用 · 无需账号 · 持续修订。</p>
+      </div>
+      <div>
+        <h4>章节</h4>
+        <ul>
+          <li><a href="map.html">第一章 · 识图</a></li>
+          <li><a href="find.html">第二章 · 寻题</a></li>
+          <li><a href="notation.html">第三章 · 读谱</a></li>
+          <li><a href="levels.html">第四章 · 关卡索引</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>数据与致谢</h4>
+        <ul>
+          <li><a href="https://github.com/joric/ootss" target="_blank" rel="noopener">joric/ootss（Unlicense）↗</a></li>
+          <li><a href="https://joric.github.io/ootss/" target="_blank" rel="noopener">社区交互地图 ↗</a></li>
+          <li><a href="about.html">附录 · 关于与致谢</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      本站文案与设计为原创；关卡名称、坐标与操作序列等事实性数据来自公共领域数据集（Unlicense），
+      快照日期 2026-11-08。游戏《沉星之序》的一切权利归 Thekla、Arc Games、Gamirror Games 及各自权利人。
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

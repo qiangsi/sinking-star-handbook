@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第一章 · 识图 — 沉星手册</title>
+<meta name="description" content="用社区交互地图给《沉星之序》定位：坐标系、上下层、高度筛选与按名搜索。沉星手册第一章。">
+<link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="index.html"><span class="star">✦</span>沉星手册<small>SINKING STAR HANDBOOK</small></a>
+    <button class="nav-toggle" aria-label="打开目录">☰</button>
+    <nav class="nav">
+      <a href="map.html" aria-current="page">识图</a>
+      <a href="find.html">寻题</a>
+      <a href="notation.html">读谱</a>
+      <a href="levels.html">关卡索引</a>
+      <a href="about.html">附录</a>
+      <a class="nav-cta" href="levels.html">查一关 →</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="page-head">
+    <div class="chapter-mark">第 一 章</div>
+    <h1>识图 · 先在地图上找到自己</h1>
+    <p class="lede">
+      《沉星之序》不给你任务清单，也不标谜题编号。卡住的时候，最可靠的第一步不是搜答案，
+      而是弄清楚「我眼前这块棋盘，到底是地图上的哪一点」。
+    </p>
+  </div>
+
+  <div class="prose">
+
+    <section>
+      <h2>为什么地图先行</h2>
+      <p>
+        这作的世界是连成一片的：同一个机制可以在好几个区域以不同面目出现，
+        两个长得像的棋盘也可能隔着半个地图。直接描述「我卡在一关」几乎没法交流；
+        说清坐标或分组名，别人才能对上你在哪。
+      </p>
+      <p>
+        社区早就替你把这份苦工做完了——
+        <b>joric 维护的交互地图</b>把全游戏 920 个正式版关卡入口（外加试玩教学关）
+        逐一定位在一张可缩放的大地图上，并给每关起了统一的名字。本手册的关卡索引，
+        底层数据同样来自这套公共领域记录，两边可以互相印证。
+      </p>
+      <p>
+        <a class="btn btn-gold" href="https://joric.github.io/ootss/" target="_blank" rel="noopener">打开社区交互地图 ↗</a>
+        &nbsp;
+        <a class="btn" href="https://github.com/joric/ootss" target="_blank" rel="noopener">数据仓库（Unlicense）↗</a>
+      </p>
+    </section>
+
+    <section>
+      <h2>地图上有什么</h2>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>要素</th><th>说明</th></tr></thead>
+          <tbody>
+            <tr><td>关卡入口点</td><td>每个可进入的谜题房间一个点，正式版共 920 个，另有 26 个三维教学关。</td></tr>
+            <tr><td>机制分组</td><td>59 组按玩法命名的分组（如「光束与镜子」「双光束下落」），同组关卡规则相通。</td></tr>
+            <tr><td>统一命名</td><td>每关一个社区通用名与编号，报告、查解都以它为准，不再各说各话。</td></tr>
+            <tr><td>解法播放</td><td>内置操作序列播放器，还支持导入存档与按图反向搜索关卡。</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section>
+      <h2>三条实用要领</h2>
+      <h3>① 平面坐标会撞车，用高度分层看</h3>
+      <p>
+        这游戏有上下层：桥上桥下、塔里塔外，两块完全不同的棋盘可以共享同一组平面坐标。
+        只盯 X、Y 会找错地方——记得切换高度（Z 轴）再对一次。
+        本手册索引里，每关都标了「高度」数值，就是给你做这个核对用的。
+      </p>
+      <h3>② 记名字，别记坐标</h3>
+      <p>
+        坐标是地图内部的事；跟人交流、翻索引、搜播放记录，用的都是关卡名或社区命名。
+        养成习惯：路过卡住的棋盘，先在地图上点出它的名字再离开。
+      </p>
+      <h3>③ 用分组理解难度曲线</h3>
+      <p>
+        59 个分组实际上是 59 条「机制教学线」。同组关卡从入门到变体依次排开——
+        卡住时先翻同组里更容易的邻关，常常比硬啃当前这关更快。
+      </p>
+    </section>
+
+    <section>
+      <h2>识图之后</h2>
+      <p>
+        定位只是第一步。下一章讲怎么把「地图上的一个点」确认成「你眼前这块棋盘」——
+        分组、命名、截图三要素与版本后缀，四步核对，一步都不要省。
+      </p>
+      <p><a class="btn" href="find.html">继续 · 第二章 寻题 →</a></p>
+    </section>
+
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h4>✦ 沉星手册</h4>
+        <p style="margin:0">一本写给卡关玩家的夜航手册。<br>免费使用 · 无需账号 · 持续修订。</p>
+      </div>
+      <div>
+        <h4>章节</h4>
+        <ul>
+          <li><a href="map.html">第一章 · 识图</a></li>
+          <li><a href="find.html">第二章 · 寻题</a></li>
+          <li><a href="notation.html">第三章 · 读谱</a></li>
+          <li><a href="levels.html">第四章 · 关卡索引</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>数据与致谢</h4>
+        <ul>
+          <li><a href="https://github.com/joric/ootss" target="_blank" rel="noopener">joric/ootss（Unlicense）↗</a></li>
+          <li><a href="https://joric.github.io/ootss/" target="_blank" rel="noopener">社区交互地图 ↗</a></li>
+          <li><a href="about.html">附录 · 关于与致谢</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      本站文案与设计为原创；关卡名称、坐标与操作序列等事实性数据来自公共领域数据集（Unlicense），
+      快照日期 2026-11-08。游戏《沉星之序》的一切权利归 Thekla、Arc Games、Gamirror Games 及各自权利人。
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第四章 · 关卡索引 — 沉星手册</title>
+<meta name="description" content="《沉星之序》946 个编目关卡的可搜索索引：按名称、社区命名或机制分组筛选，点开即见逐步展开的操作序列。">
+<link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="index.html"><span class="star">✦</span>沉星手册<small>SINKING STAR HANDBOOK</small></a>
+    <button class="nav-toggle" aria-label="打开目录">☰</button>
+    <nav class="nav">
+      <a href="map.html">识图</a>
+      <a href="find.html">寻题</a>
+      <a href="notation.html">读谱</a>
+      <a href="levels.html" aria-current="page">关卡索引</a>
+      <a href="about.html">附录</a>
+      <a class="nav-cta" href="levels.html">查一关 →</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="page-head">
+    <div class="chapter-mark">第 四 章</div>
+    <h1>关卡索引 · 946 关一搜即得</h1>
+    <p class="lede">
+      输入关卡名或社区命名，或按机制分组筛选；点开任意一行，
+      操作序列会按第二章的记号规则逐步展开，可一键复制。
+      记号读不懂？先回<a href="notation.html">第三章</a>。
+    </p>
+  </div>
+
+  <div class="prose" style="padding-top:6px">
+
+    <div class="toolbar">
+      <div class="search-box">
+        <span aria-hidden="true">⌕</span>
+        <input id="lv-search" type="search" placeholder="搜索关卡名 / 社区命名 / 分组（如 mirror、heroes）…" autocomplete="off">
+      </div>
+      <select id="lv-set" class="filter" aria-label="机制分组">
+        <option value="">全部分组</option>
+      </select>
+      <select id="lv-status" class="filter" aria-label="解法状态">
+        <option value="all">全部状态</option>
+        <option value="comm">仅社区路线</option>
+        <option value="auto">仅自动求解</option>
+        <option value="any">有解法记录</option>
+        <option value="none">暂无解法</option>
+      </select>
+    </div>
+
+    <div class="chips-bar">
+      <button class="chips-toggle" id="lv-chips-toggle" aria-expanded="false" aria-controls="lv-chips">按机制分组筛选 <span class="caret" aria-hidden="true">▾</span></button>
+    </div>
+
+    <div class="chips" id="lv-chips" hidden></div>
+
+    <div class="result-meta" id="lv-meta">正在载入索引…</div>
+
+    <div class="lv-detail" id="lv-detail" style="display:none" aria-live="polite"></div>
+
+    <div class="lv-list" id="lv-list"></div>
+
+    <div class="show-more"><button class="btn" id="lv-more">显示更多 ↓</button></div>
+
+    <section style="margin-top:26px">
+      <div class="note">
+        <b>数据说明：</b>本索引为 2026-11-08 的静态快照，源自社区公共领域数据集
+        <a href="https://github.com/joric/ootss" target="_blank" rel="noopener">joric/ootss</a>（Unlicense）。
+        「社区路线」为玩家验证序列；「自动求解」为程序生成、未逐关实机复核，
+        含 F / B 记号的序列请按第三章的提醒谨慎使用。地图定位与反向搜图请直达
+        <a href="https://joric.github.io/ootss/" target="_blank" rel="noopener">社区交互地图 ↗</a>。
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h4>✦ 沉星手册</h4>
+        <p style="margin:0">一本写给卡关玩家的夜航手册。<br>免费使用 · 无需账号 · 持续修订。</p>
+      </div>
+      <div>
+        <h4>章节</h4>
+        <ul>
+          <li><a href="map.html">第一章 · 识图</a></li>
+          <li><a href="find.html">第二章 · 寻题</a></li>
+          <li><a href="notation.html">第三章 · 读谱</a></li>
+          <li><a href="levels.html">第四章 · 关卡索引</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>数据与致谢</h4>
+        <ul>
+          <li><a href="https://github.com/joric/ootss" target="_blank" rel="noopener">joric/ootss（Unlicense）↗</a></li>
+          <li><a href="https://joric.github.io/ootss/" target="_blank" rel="noopener">社区交互地图 ↗</a></li>
+          <li><a href="about.html">附录 · 关于与致谢</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      本站文案与设计为原创；关卡名称、坐标与操作序列等事实性数据来自公共领域数据集（Unlicense），
+      快照日期 2026-11-08。游戏《沉星之序》的一切权利归 Thekla、Arc Games、Gamirror Games 及各自权利人。
+    </div>
+  </div>
+</footer>
+
+<script src="assets/data/levels-index.js"></script>
+<script src="assets/main.js"></script>
+</body>
+</html>

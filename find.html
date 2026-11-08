@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>第二章 · 寻题 — 沉星手册</title>
+<meta name="description" content="四步核对法确认你卡住的棋盘，附《沉星之序》946 个编目关卡的收录统计。沉星手册第二章。">
+<link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="index.html"><span class="star">✦</span>沉星手册<small>SINKING STAR HANDBOOK</small></a>
+    <button class="nav-toggle" aria-label="打开目录">☰</button>
+    <nav class="nav">
+      <a href="map.html">识图</a>
+      <a href="find.html" aria-current="page">寻题</a>
+      <a href="notation.html">读谱</a>
+      <a href="levels.html">关卡索引</a>
+      <a href="about.html">附录</a>
+      <a class="nav-cta" href="levels.html">查一关 →</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <div class="page-head">
+    <div class="chapter-mark">第 二 章</div>
+    <h1>寻题 · 确认那就是你卡的棋盘</h1>
+    <p class="lede">
+      翻错题、抄错谱，比没有攻略更耽误时间。这一章给你一套四步核对法，
+      以及本手册数据快照的完整收录统计——先对上号，再谈解法。
+    </p>
+  </div>
+
+  <div class="prose">
+
+    <section>
+      <h2>四步核对法</h2>
+      <h3>第一步 · 说出分组</h3>
+      <p>
+        眼前的棋盘在动什么机制？英雄推箱子、光束照镜子、石块打水漂，还是哥布林转圈？
+        先把机制说出口，范围立刻从 946 关缩到一组几十关以内。
+      </p>
+      <h3>第二步 · 对上名字</h3>
+      <p>
+        每关在社区数据里有两个名字：内部名（如 <code>mirror_1</code>）和社区命名。
+        在地图或本手册索引里搜索关键词，把候选缩到一两个。名字对不上时，别硬猜——
+        用第三步的截图核对兜底。
+      </p>
+      <h3>第三步 · 截图三要素</h3>
+      <ul>
+        <li><b>岛屿轮廓</b>：棋盘的形状、分割与通道走向；</li>
+        <li><b>角色站位</b>：可操作角色（们）的初始位置与朝向；</li>
+        <li><b>障碍布置</b>：镜子、石块、水格、门闸这类关键物件的落点。</li>
+      </ul>
+      <p>三要素都对上，才是「同一关」。只凭名字像就开抄，是翻车最常见的原因。</p>
+      <h3>第四步 · 看版本后缀</h3>
+      <p>
+        数据里的关卡名常带 <code>_v2</code>、<code>_alt</code> 之类的后缀，
+        表示同一位置在开发过程中的不同版本。拿不准时优先无后缀的正式版；
+        有后缀的关，先用三要素确认它和你眼前的一致。
+      </p>
+      <div class="note">
+        本手册的原则：<b>查不到就是查不到</b>。缺截图、缺解法的关卡会如实标注「暂无」，
+        绝不拿别的棋盘凑数。假线索比没有线索浪费的时间多十倍。
+      </div>
+    </section>
+
+    <section>
+      <h2>收录统计（数据快照）</h2>
+      <p>
+        以下数字来自本手册 2026-11-08 的数据快照，底层是社区公共领域记录
+        （joric/ootss，Release 正式版）。946 个编目关卡 = 920 个正式版入口 + 26 个三维教学关。
+      </p>
+      <div class="stat-strip" style="margin-bottom:22px">
+        <div class="stat"><div class="v">946</div><div class="k">编目关卡</div></div>
+        <div class="stat"><div class="v">107</div><div class="k">社区验证路线</div></div>
+        <div class="stat"><div class="v">829</div><div class="k">自动求解</div></div>
+        <div class="stat"><div class="v">10</div><div class="k">暂无解法</div></div>
+      </div>
+
+      <h3>机制分组 · 按关卡数排序（前十二）</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>分组</th><th>原名</th><th class="num">关卡数</th><th class="num">社区路线</th></tr></thead>
+          <tbody>
+            <tr><td>三维·英雄</td><td>heroes_in_3d</td><td class="num">67</td><td class="num">—</td></tr>
+            <tr><td>光束与基础英雄</td><td>beams_and_basic_heroes</td><td class="num">62</td><td class="num">—</td></tr>
+            <tr><td>英雄与石块</td><td>heroes_and_stones</td><td class="num">41</td><td class="num">—</td></tr>
+            <tr><td>光束与镜子</td><td>beams_and_mirrors</td><td class="num">40</td><td class="num">—</td></tr>
+            <tr><td>终局·三</td><td>endgame3</td><td class="num">40</td><td class="num">—</td></tr>
+            <tr><td>光束与石块</td><td>beams_and_stones</td><td class="num">36</td><td class="num">—</td></tr>
+            <tr><td>英雄与镜子</td><td>heroes_and_mirrors</td><td class="num">35</td><td class="num">—</td></tr>
+            <tr><td>英雄与水域</td><td>heroes_and_water</td><td class="num">33</td><td class="num">—</td></tr>
+            <tr><td>垂直镜面</td><td>vertical_mirrors</td><td class="num">32</td><td class="num">—</td></tr>
+            <tr><td>英雄二·怪物</td><td>heroes2</td><td class="num">30</td><td class="num">—</td></tr>
+            <tr><td>镜子与石块</td><td>mirrors_and_stones</td><td class="num">29</td><td class="num">—</td></tr>
+            <tr><td>三维·打水漂</td><td>skipping_in_3d</td><td class="num">29</td><td class="num">—</td></tr>
+            <tr class="total"><td>其余 47 组合计</td><td>—</td><td class="num">472</td><td class="num">—</td></tr>
+            <tr class="total"><td>合计</td><td>59 组</td><td class="num" colspan="2">946</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="color:var(--muted);font-size:13.5px;margin-top:10px">
+        完整分组清单与逐关状态，见<a href="levels.html">第四章 · 关卡索引</a>；
+        各分组内社区路线的分布，在索引页按状态筛选即可查看。
+      </p>
+
+      <h3>大区参考</h3>
+      <p>
+        除机制分组外，社区数据还标注了七个核心大区：搬运英雄（Heroes of Hauling）、
+        怪物英雄二（Heroes 2: Monsters）、诗人与德鲁伊英雄三（Heroes 3: Bard, Druid）、
+        英雄与水域（Heroes and Water）、镜像群岛（Mirror Isles）、誓约（The Promise）
+        与交汇地（Crossroads）。大区是地图上的地理划分，机制分组是玩法线索，
+        两者交叉使用，定位最快。译名均为本手册自拟，以原文为准。
+      </p>
+    </section>
+
+    <section>
+      <h2>两条路线，两种可信度</h2>
+      <p>
+        本手册索引里的解法分两档，全部明确标注，不混在一起冒充「已验证」：
+      </p>
+      <ul>
+        <li><b>社区路线</b>：玩家逐关录制、可在社区引擎里回放的序列，共 107 条。</li>
+        <li><b>自动求解</b>：程序求解生成的序列，共 829 条。数学上可解不代表手感上顺畅，
+          步数也未必最优；动手前先读第三章的读谱规则与 F/B 记号说明。</li>
+      </ul>
+      <p>另有 10 个关卡暂无任何解法记录——它们通常正是各机制线的最深尽头。</p>
+    </section>
+
+    <section>
+      <h2>对上号之后</h2>
+      <p>
+        棋盘确认了，剩下的事是把序列读懂、走通。下一章把每个记号拆开讲清楚。
+      </p>
+      <p><a class="btn" href="notation.html">继续 · 第三章 读谱 →</a></p>
+    </section>
+
+  </div>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h4>✦ 沉星手册</h4>
+        <p style="margin:0">一本写给卡关玩家的夜航手册。<br>免费使用 · 无需账号 · 持续修订。</p>
+      </div>
+      <div>
+        <h4>章节</h4>
+        <ul>
+          <li><a href="map.html">第一章 · 识图</a></li>
+          <li><a href="find.html">第二章 · 寻题</a></li>
+          <li><a href="notation.html">第三章 · 读谱</a></li>
+          <li><a href="levels.html">第四章 · 关卡索引</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>数据与致谢</h4>
+        <ul>
+          <li><a href="https://github.com/joric/ootss" target="_blank" rel="noopener">joric/ootss（Unlicense）↗</a></li>
+          <li><a href="https://joric.github.io/ootss/" target="_blank" rel="noopener">社区交互地图 ↗</a></li>
+          <li><a href="about.html">附录 · 关于与致谢</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      本站文案与设计为原创；关卡名称、坐标与操作序列等事实性数据来自公共领域数据集（Unlicense），
+      快照日期 2026-11-08。游戏《沉星之序》的一切权利归 Thekla、Arc Games、Gamirror Games 及各自权利人。
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>

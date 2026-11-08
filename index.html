@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>沉星手册 · 《沉星之序》玩家攻略手册</title>
+<meta name="description" content="《沉星之序》（Order of the Sinking Star）非官方玩家手册：交互地图指南、关卡索引与解法读谱。946 个已编目关卡，数据来自社区公共领域记录。">
+<link rel="icon" type="image/svg+xml" href="assets/icon.svg">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="container topbar-inner">
+    <a class="brand" href="index.html"><span class="star">✦</span>沉星手册<small>SINKING STAR HANDBOOK</small></a>
+    <button class="nav-toggle" aria-label="打开目录">☰</button>
+    <nav class="nav">
+      <a href="map.html">识图</a>
+      <a href="find.html">寻题</a>
+      <a href="notation.html">读谱</a>
+      <a href="levels.html">关卡索引</a>
+      <a href="about.html">附录</a>
+      <a class="nav-cta" href="levels.html">查一关 →</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="sink-scene" aria-hidden="true">
+    <div class="sink-star"></div>
+    <div class="sink-line"></div>
+  </div>
+  <div class="container hero-inner">
+    <div class="eyebrow">非官方玩家手册 · 持续修订</div>
+    <h1>沉<span class="glow">星</span>手册</h1>
+    <div class="sub">SINKING STAR HANDBOOK</div>
+    <p class="tagline">
+      给《沉星之序》玩家的三件事：<em>先认棋盘</em>，<em>再读解谱</em>，
+      最后回到游戏里，亲手把那条路线走通。
+    </p>
+    <div class="hero-actions">
+      <a class="btn btn-gold" href="levels.html">进入关卡索引</a>
+      <a class="btn" href="map.html">从第一章读起</a>
+    </div>
+  </div>
+</section>
+
+<main class="container prose">
+
+  <section>
+    <h2>手册速览</h2>
+    <div class="stat-strip">
+      <div class="stat"><div class="v">946</div><div class="k">已编目关卡</div></div>
+      <div class="stat"><div class="v">59</div><div class="k">机制分组</div></div>
+      <div class="stat"><div class="v">107</div><div class="k">社区路线</div></div>
+      <div class="stat"><div class="v">829</div><div class="k">自动求解</div></div>
+    </div>
+    <p style="color:var(--muted);font-size:13.5px;margin-top:12px">
+      数据快照：2026-11-08，取自社区项目 <a href="https://github.com/joric/ootss" target="_blank" rel="noopener">joric/ootss</a>（Unlicense 公共领域）。
+      「社区路线」指玩家逐步验证过的操作序列；「自动求解」由程序生成，未逐关实机复核。
+    </p>
+  </section>
+
+  <section>
+    <h2>目录</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <div class="num">第一章 · 识图</div>
+        <h3><a href="map.html">先在地图上找到自己</a></h3>
+        <p>游戏没有任务清单，卡住时最先要做的是定位。认识社区交互地图的坐标系、上下层与高度筛选。</p>
+        <a class="go" href="map.html">阅读 →</a>
+      </div>
+      <div class="card">
+        <div class="num">第二章 · 寻题</div>
+        <h3><a href="find.html">确认那就是你卡住的棋盘</a></h3>
+        <p>四步核对法：分组、命名、截图三要素与版本后缀。附本手册数据快照的完整收录统计。</p>
+        <a class="go" href="find.html">阅读 →</a>
+      </div>
+      <div class="card">
+        <div class="num">第三章 · 读谱</div>
+        <h3><a href="notation.html">箭头、次数与动作代码</a></h3>
+        <p>→ ×3 是什么意思？X、C、V 各做什么？逐个记号拆开讲，并说明自动求解记录里的特殊情况。</p>
+        <a class="go" href="notation.html">阅读 →</a>
+      </div>
+      <div class="card">
+        <div class="num">第四章 · 关卡索引</div>
+        <h3><a href="levels.html">946 关，一搜即得</a></h3>
+        <p>按名称、社区命名或机制分组筛选，点开即见展开后的逐步操作序列，可一键复制。</p>
+        <a class="go" href="levels.html">打开索引 →</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>三步用法</h2>
+    <div class="grid grid-3">
+      <div class="card">
+        <div class="num">① 定位</div>
+        <h3>我在哪</h3>
+        <p>打开社区地图，或翻本手册索引，用岛屿、角色、障碍物三要素把眼前的棋盘对上号。</p>
+      </div>
+      <div class="card">
+        <div class="num">② 读谱</div>
+        <h3>路线是什么</h3>
+        <p>展开操作序列，按箭头与次数理解每一步的意图，而不是急着照抄。</p>
+      </div>
+      <div class="card">
+        <div class="num">③ 走通</div>
+        <h3>回到游戏</h3>
+        <p>分段复刻、随时撤销。手册给的是路标，最后一步永远由你自己完成。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>关于这款游戏</h2>
+    <p>
+      《沉星之序》（Order of the Sinking Star）是 Thekla 工作室开发的解谜冒险游戏，
+      由 Arc Games 与 Gamirror Games 发行，2026 年 10 月 8 日登陆 Steam。
+      游戏包含四个风格迥异的世界、一千余个手工设计的谜题房间，每个房间的规则都不重复；
+      发售前放出的免费试玩版就收录了一百多个谜题。
+    </p>
+    <p style="color:var(--muted);font-size:14px">
+      官方页面：
+      <a href="https://store.steampowered.com/search/?term=Order+of+the+Sinking+Star" target="_blank" rel="noopener">在 Steam 上搜索本作 ↗</a>
+    </p>
+    <div class="note gold">
+      <b>非官方声明：</b>沉星手册是玩家自制的免费参考资料，与 Thekla、Arc Games、Gamirror Games
+      及其权利人没有任何隶属关系。游戏名称与相关权利归其权利人所有。
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <h4>✦ 沉星手册</h4>
+        <p style="margin:0">一本写给卡关玩家的夜航手册。<br>免费使用 · 无需账号 · 持续修订。</p>
+      </div>
+      <div>
+        <h4>章节</h4>
+        <ul>
+          <li><a href="map.html">第一章 · 识图</a></li>
+          <li><a href="find.html">第二章 · 寻题</a></li>
+          <li><a href="notation.html">第三章 · 读谱</a></li>
+          <li><a href="levels.html">第四章 · 关卡索引</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>数据与致谢</h4>
+        <ul>
+          <li><a href="https://github.com/joric/ootss" target="_blank" rel="noopener">joric/ootss（Unlicense）↗</a></li>
+          <li><a href="https://joric.github.io/ootss/" target="_blank" rel="noopener">社区交互地图 ↗</a></li>
+          <li><a href="about.html">附录 · 关于与致谢</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-note">
+      本站文案与设计为原创；关卡名称、坐标与操作序列等事实性数据来自公共领域数据集（Unlicense），
+      快照日期 2026-11-08。游戏《沉星之序》的一切权利归 Thekla、Arc Games、Gamirror Games 及各自权利人。
+    </div>
+  </div>
+</footer>
+
+<script src="assets/main.js"></script>
+</body>
+</html>
