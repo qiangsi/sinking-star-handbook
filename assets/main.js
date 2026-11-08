@@ -130,6 +130,15 @@
   var ACT_LABEL = { X: "主行动", C: "切换角色", V: "副行动" };
   var FB_LABEL = { F: "前(未证实)", B: "后(未证实)" };
 
+  /* 记号的汉字标注：d=方向 / a=行动 / w=存疑（F、B） */
+  var MOVE_ZH = { U: "上", D: "下", L: "左", R: "右", X: "主行动", C: "换人", V: "副行动", F: "前", B: "后" };
+  var MOVE_KIND = { U: "d", D: "d", L: "d", R: "d", X: "a", C: "a", V: "a", F: "w", B: "w" };
+  var MOVE_TITLE = {
+    U: "向上移动", D: "向下移动", L: "向左移动", R: "向右移动",
+    X: "主行动（推动 / 互动等核心动作）", C: "换人（切换角色）", V: "副行动（次要动作）",
+    F: "F — 含义未证实（疑似「前」），见第三章", B: "B — 含义未证实（疑似「后」），见第三章"
+  };
+
   /* 把紧凑解法串解析为记号数组，如 "R2XL4X" → [{c:'R',n:2},{c:'X'}…] */
   function parseMoves(str) {
     var out = [];
@@ -329,13 +338,13 @@
     });
     var toks = parseMoves(lv.m || "");
     var movesHtml = toks.map(function (t) {
-      var dir = DIR_GLYPH[t.c];
-      var label, cls = "";
-      if (dir) label = '<span class="dir">' + dir + "</span>";
-      else if (ACT_LABEL[t.c]) label = '<span class="act">' + t.c + "</span>";
-      else { label = '<span class="act">' + t.c + "</span>"; cls = " warn"; }
+      var kind = MOVE_KIND[t.c] || "w";
+      var zh = MOVE_ZH[t.c] || t.c;
       var rep = t.n > 1 ? '<span class="x">×' + t.n + "</span>" : "";
-      return '<span class="tok' + cls + '">' + label + rep + "</span>";
+      return '<span class="tok ' + kind + '" title="' + (MOVE_TITLE[t.c] || t.c) + '">' +
+        '<span class="zh">' + zh + "</span>" +
+        '<span class="key">' + t.c + "</span>" +
+        rep + "</span>";
     }).join("");
     if (!movesHtml) movesHtml = '<span class="sub">该关卡暂无可用解法记录。</span>';
 
